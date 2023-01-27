@@ -1,0 +1,26 @@
+{% extends "base2.html" %}
+{% block title %}<title>創建賣家新帳號</title>{% endblock %}
+{% block content %}
+  <h2>賣家 創建新帳號</h2>
+  <a href="/sellpeoplelogin/">[登入頁面]</a>
+  <form action="." method="POST" name="form1">
+	{% csrf_token %}
+	<table border="1" cellspacing="1" cellpadding="4">
+	  <tr><th>帳號名稱</th><td>{{postform.paccount}}</td></tr>
+	  <tr><th>姓氏</th><td>{{postform.pfirstname}}</td></tr>
+	  <tr><th>姓名</th><td>{{postform.plastname}}</td></tr>
+	  <tr><th>電子信箱</th><td>{{postform.pmail}}</td></tr>
+	  <tr><th>密碼</th><td>{{postform.pcode}}</td></tr>
+	  
+	  
+	  
+	  
+	  <tr>
+		<th align="center" >
+		  <input type="submit" name="button" id="button" value="送出">
+		  <input type="reset" name="button2" id="button2" value="重設"></th>
+	  </tr>
+	</table>
+	<span style="color:red">{{message}}</span>
+	</form>
+{% endblock %}

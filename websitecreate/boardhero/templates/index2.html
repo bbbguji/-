@@ -1,0 +1,26 @@
+{% extends 'base2.html' %}
+{% block title %}<title>顯示所有資料</title>{% endblock %}
+{% block content %}
+<h2 align="left">顯示 student 資料表所有資料&nbsp;&nbsp;
+<a href="/post1/">新增一</a>&nbsp;&nbsp;<a href="/post2/">新增二</a></h2>
+<form action="." method="POST" name="form1">
+{% csrf_token %}
+<table border="1" cellpadding="0" cellspacing="0">
+	<th>編號</th><th>姓名</th><th>價格</th><th>生日</th>
+	<th>郵件帳號</th><th>電話</th><th>地址</th><th>編輯</th>
+	{% for student in students %}
+		<tr>
+			
+			<td>{{ postform.pname }} </td>
+			<td>{{ postform.pprice }} </td>
+			<td>{{ postform.pimages }} </td>
+			<td>{{ postform.pdescription }} </td>
+			
+            
+              
+            
+		</tr>
+	{% endfor %}
+</table>
+</form>
+{% endblock %}	

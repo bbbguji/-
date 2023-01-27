@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+{% load extras %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>賣家上傳專區</title>
+	{% load static %}
+	<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+	{% block script %}{% endblock %}
+</head>
+<body bgcolor="#cccccc">
+	<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td height="124" valign="top" background="{% static "images/10.jpg" %}">
+		  <div class="titleDiv"> [請先上傳商品圖片檔並輸入商品相關訊息，之後再點擊創建商品並輸入圖片檔名+.png]<br /></div>
+		  <div class="menulink">
+			<a href="/adminmain/">[管理首頁]</a>
+			<a href="/logout/">[登出系統]</a>
+			<a href="/index/">[回到主頁面]</a>
+		  </div>
+		</td>
+		<div class="create">
+  			<a href="/create/">[創建商品]</a> 
+  		  </div>
+	  </tr>
+	  <tr>
+		<td background="{% static "images/album_r2_c1.jpg" %}">
+		  <div id="mainRegion">
+			  <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
+				<tr>
+				  <td>
+					{% block content %}{% endblock %}
+				  </td>
+				</tr>
+			  </table>
+		  </div>
+		</td>
+	  </tr>
+	  <tr>
+		<td align="center" background="{% static "images/album_r2_c1.jpg" %}" class="trademark">臺北市立建國中學110學年度第一學期自主學習 21015張盛瑋 21033廖富亮 </td>
+	  </tr>
+	  <tr>
+		<td><img name="album_r4_c1" src="{% static "images/album_r4_c1.jpg" %}" width="778" height="24" border="0" id="album_r4_c1" alt="" /></td>
+	  </tr>
+	</table>
+</body>
+</html>
